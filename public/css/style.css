@@ -45,7 +45,7 @@ nav a {
 }
 
 .highlight {
-  color: #086f26;
+  color: #777777;
   font-weight: 550;  
 }
 
@@ -54,7 +54,7 @@ input {
   padding: 8px;
 }
 
-button {
+.search_button {
   cursor: pointer;
   border: 1px solid #888888;
   background: #888888;
@@ -63,7 +63,7 @@ button {
 }
 
 a {
-    color: #7c88ee;
+  color: #7c88ee;
   margin-right: 16px;
   text-decoration: none;  
 }

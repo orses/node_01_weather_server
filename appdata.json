@@ -15,6 +15,13 @@
     "repository": "GitHub",
     "projectURL": "http://bit.ly/2U8X2te"
   },
+  "credits":{
+    "name":"Créditos",
+    "apis":[
+      {"name":"mapbox",
+      "url":"https://www.mapbox.com/"}
+    ]
+  }
   "improvements": [
     "Recibir los datos desglosados para poderlos ofrecer en contenedores individuales",
     "Mostrar los mensajes de error, Carga y datos de forma visual bien diferenciados tanto por el texto como por su contenedor",
