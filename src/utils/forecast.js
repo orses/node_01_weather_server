@@ -20,15 +20,12 @@ const forecast = (latitude, longitude, callback) => {
   request({ url, json: true }, (error, { body }) => {
     if (error) {
       // Gestiona errores de conexión
-      callback(
-        '¡No se puede conectar con el servicio metereológico!',
-        undefined
-      );
+      callback('¡No se puede conectar con el servicio metereológico!', undefined);
     } else if (body.error) {
-      // Gestiona errores de respueta
+      // Gestiona errores de respuesta
       callback(
         'No se puede encontrar la localización proporcionada, pruebe con otra búsqueda',
-        undefined
+        undefined,
       );
     } else {
       // At the moment
@@ -39,9 +36,7 @@ const forecast = (latitude, longitude, callback) => {
           body.currently.temperature
         }. La minima de hoy es de ${daily.temperatureLow} ºC, y la máxima de ${
           daily.temperatureHigh
-        } ºC. Hay un ${(daily.precipProbability * 100).toFixed(
-          0
-        )}% de probabilidad de lluvia`
+        } ºC. Hay un ${(daily.precipProbability * 100).toFixed(0)}% de probabilidad de lluvia`,
       );
     }
   });
