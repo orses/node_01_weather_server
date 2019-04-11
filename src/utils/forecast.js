@@ -1,17 +1,5 @@
 const request = require('request');
 
-/* //Forecast
-    const daily = response.body.daily.data;
-    daily.forEach(day =>
-      console.log(
-        `${day.summary} Temperaturas: ${day.temperatureLow} - ${
-          day.temperatureHigh
-        }. Hay un ${day.precipProbability * 100}% probabilidad de lluvia`
-      )
-    );
-  }
-}); */
-
 const forecast = (latitude, longitude, callback) => {
   const url = `https://api.darksky.net/forecast/${
     process.env.FORECAST_KEY

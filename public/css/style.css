@@ -40,6 +40,15 @@ nav a {
   width: 250px;
 }
 
+.help_image {
+  border: 1px solid #888888
+}
+
+.highlight {
+  color: #086f26;
+  font-weight: 550;  
+}
+
 input {
   border: 1px solid #cccccc;
   padding: 8px;
@@ -51,4 +60,10 @@ button {
   background: #888888;
   color: white;
   padding: 8px;
+}
+
+a {
+    color: #7c88ee;
+  margin-right: 16px;
+  text-decoration: none;  
 }

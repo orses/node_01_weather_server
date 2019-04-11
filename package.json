@@ -1,7 +1,7 @@
 {
   "name": "node_03_weather_web_server",
   "version": "1.0.0",
-  "description": "Este proyecto es una variación de un ejercicio propuesto por Andrew Mead en su curso The Complete React Web Developer Course (with Redux), que persigue aprender a utilizar API's de terceros (DarkSky, Mapbox), empleo de Node para servir páginas web (Express), y uso de plantillas mediante HandleBar.js.",
+  "description": "Este proyecto es una variación de un ejercicio propuesto por Andrew Mead en su curso The Complete Node.js Developer Course (3rd Edition), que persigue aprender a utilizar API's de terceros (DarkSky, Mapbox), empleo de Node para servir páginas web (Express), y uso de plantillas mediante HandleBar.js.",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/app.js",

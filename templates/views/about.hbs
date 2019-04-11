@@ -8,9 +8,9 @@
 <body>
   {{>header}}
   <main>
-    <p>Este sitio fue creado por {{name}}. Los datos que se emplean son de mapbox.com and darksky.net</p>
-    <img class="portrait" src="/img/robot.png" />
-    <p>{{description}}</p>
+    <p>Este sitio fue creado por {{appData.author}}. Los datos que se emplean son de mapbox.com and darksky.net</p>
+    <img class="portrait" src="/img/robot.png" alt="Robot y gato como imagen del autor" />
+    <p>{{appData.description}}</p>
   </main>
   {{>footer}}
 </body>

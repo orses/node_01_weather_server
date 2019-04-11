@@ -2,10 +2,11 @@ const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
 require('dotenv').config(); // To use .env variables
-const appData = require('../appdata.json').app;
+const appData = require('../appdata.json');
 
 const geoCode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
+const rangeOfYears = require('./utils/helpers');
 
 // Creating the web server
 const app = express();
@@ -27,31 +28,31 @@ app.use(express.static(publicDirectoryPath));
 // Routes and responses
 app.get('/', (req, res) => {
   res.render('index', {
-    title: appData.name,
-    name: appData.author,
+    title: 'El tiempo',
+    appData,
+    rangeOfYears: rangeOfYears(2019),
   });
 });
 
 app.get('/acerca', (req, res) => {
   res.render('about', {
     title: 'Acerca de',
-    name: appData.author,
-    description: appData.description,
+    appData,
+    rangeOfYears: rangeOfYears(2019),
   });
 });
 
 app.get('/ayuda', (req, res) => {
   res.render('help', {
     title: 'Ayuda',
-    name: appData.author,
-    helpText:
-      'Introducir en la caja de búsqueda el nombre de la ciudad a localizar. La aplicación hará el resto 😏',
+    appData,
+    rangeOfYears: rangeOfYears(2019),
   });
 });
 
 app.get('/weather', (req, res) => {
-  const address = req.query.address;
-  const control = req.query.control;
+  const { address } = req.query;
+  const { control } = req.query;
   if (!address) {
     return res.send({
       error: 'Se debe introduccir una localización',
