@@ -14,8 +14,7 @@ const geoCode = (address, callback) => {
   request({ url, json: true }, (error, { body }) => {
     if (!body) {
       callback('¡Sin acceso al servicio de geolocalización!', undefined);
-    }
-    if (error) {
+    } else if (error) {
       callback('¡No se puede conectar con el servicio de Geolocalización!', undefined);
     } else if (body.features.length === 0) {
       callback(
