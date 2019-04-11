@@ -1,0 +1,19 @@
+{
+  "app": {
+    "name": "El tiempo",
+    "author": "JuanPCB",
+    "year": "2019",
+    "source": {
+      "author": "Andrew Mead",
+      "title": "The Complete React Web Developer Course (with Redux)",
+      "web_course": "https://www.udemy.com/react-2nd-edition/",
+      "application": "web-server"
+    },
+    "description": "Este proyecto es una variación de un ejercicio propuesto por Andrew Mead en su curso The Complete React Web Developer Course (with Redux), que persigue aprender a utilizar API's de terceros (DarkSky, Mapbox), empleo de Node para servir páginas web (Express), y uso de plantillas mediante HandleBar.js."
+  },
+  "improvements": [
+    "Recibir los datos desglosados para poderlos ofrecer en contenedores individuales",
+    "Mostrar la previsión del día actual y de los siguientes 5 o 7 días",
+    "Ofrecer por defecto, como inicio, la previsión del tiempo acorde a la IP del cliente"
+  ]
+}
