@@ -8,19 +8,19 @@ const request = require('request');
  */
 const geoCode = (address, callback) => {
   const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
-    address
+    address,
   )}.json?limit=1&language=es&access_token=${process.env.MAPBOX_KEY}`;
 
   request({ url, json: true }, (error, { body }) => {
+    if (!body) {
+      callback('¡Sin acceso al servicio de geolocalización!', undefined);
+    }
     if (error) {
-      callback(
-        '¡No se puede conectar con el servicio de Geolocalización!',
-        undefined
-      );
+      callback('¡No se puede conectar con el servicio de Geolocalización!', undefined);
     } else if (body.features.length === 0) {
       callback(
         'No se puede encontrar la localización proporcionada. Pruebe con otra búsqueda.',
-        undefined
+        undefined,
       );
     } else {
       const feature = body.features[0];
