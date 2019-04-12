@@ -33,12 +33,7 @@ h1 {
 nav a {
   color: #888888;
   margin-right: 16px;
-  text-decoration: none;  
-}
-
-nav a:hover {
-  border-bottom: 1px solid #888888;
-  padding-bottom: 6px;
+  text-decoration: none;
 }
 
 .portrait {
