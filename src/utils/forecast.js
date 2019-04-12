@@ -20,11 +20,13 @@ const forecast = (latitude, longitude, callback) => {
       const daily = body.daily.data[0];
       callback(
         undefined,
-        `${daily.summary} La temperatura actual es de ${
-          body.currently.temperature
-        }. La minima de hoy es de ${daily.temperatureLow} ºC, y la máxima de ${
-          daily.temperatureHigh
-        } ºC. Hay un ${(daily.precipProbability * 100).toFixed(0)}% de probabilidad de lluvia`,
+        `${daily.summary} La temperatura actual es de ${body.currently.temperature.toFixed(
+          0,
+        )} ºC. La minima de hoy es de ${daily.temperatureLow.toFixed(
+          0,
+        )} ºC, y la máxima de ${daily.temperatureHigh.toFixed(0)} ºC. Hay un ${(
+          daily.precipProbability * 100
+        ).toFixed(0)}% de probabilidad de lluvia`,
       );
     }
   });

@@ -36,6 +36,11 @@ nav a {
   text-decoration: none;  
 }
 
+nav a:hover {
+  border-bottom: 1px solid #888888;
+  padding-bottom: 6px;
+}
+
 .portrait {
   width: 250px;
 }
@@ -45,7 +50,7 @@ nav a {
 }
 
 .highlight {
-  color: #777777;
+  color: #056954;
   font-weight: 550;  
 }
 
