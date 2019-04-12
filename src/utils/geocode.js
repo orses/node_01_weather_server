@@ -11,25 +11,27 @@ const geoCode = (address, callback) => {
     address,
   )}.json?limit=1&language=es&access_token=${process.env.MAPBOX_KEY}`;
 
-  request({ url, json: true }, (error, { body }) => {
-    if (!body) {
-      callback('¡Sin acceso al servicio de geolocalización!', undefined);
-    } else if (error) {
-      callback('¡No se puede conectar con el servicio de Geolocalización!', undefined);
-    } else if (body.features.length === 0) {
-      callback(
-        'No se puede encontrar la localización proporcionada. Pruebe con otra búsqueda.',
-        undefined,
-      );
-    } else {
-      const feature = body.features[0];
-      callback(undefined, {
-        latitude: feature.center[1],
-        longitude: feature.center[0],
-        location: feature.place_name_es,
-      });
-    }
-  });
+  try {
+    request({ url, json: true }, (error, { body }) => {
+      if (error) {
+        callback('¡No se puede conectar con el servicio de Geolocalización!', undefined);
+      } else if (body.features.length === 0) {
+        callback(
+          'No se puede encontrar la localización proporcionada. Pruebe con otra búsqueda.',
+          undefined,
+        );
+      } else {
+        const feature = body.features[0];
+        callback(undefined, {
+          latitude: feature.center[1],
+          longitude: feature.center[0],
+          location: feature.place_name_es,
+        });
+      }
+    });
+  } catch (err) {
+    callback('¡El servicio de Geolocalización no está disponible!', undefined);
+  }
 };
 
 module.exports = geoCode;
