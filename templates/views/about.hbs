@@ -8,9 +8,38 @@
 <body>
   {{>header}}
   <main>
-    <p>Este sitio fue creado por {{appData.app.author}}. Los datos que se emplean son de mapbox.com y darksky.net</p>
-    <img class="portrait" src="/img/robot_cc0_250.png" alt="Robot y gato como imagen del autor" />
-    <p>{{appData.description}}</p>
+    <p>Este sitio fue realizado por {{appData.app.author}}, a partir de un ejercicio creado y desarrollado por
+      {{ appData.app.source.author}} en su curso <a href="{{appData.app.source.url}}">{{appData.app.source.title}}.</a>
+    </p>
+    <p>Los datos que se emplean para la obtención de las coordenadas y la previsión del tiempo proceden de Mapbox.com y
+      DarkSky.net respectivamente.</p>
+    <img class="portrait" src="/img/robot_cc0_400_02.png" alt="Robot y gato como imagen del autor" />
+    <h2>Créditos</h2>
+    <ul class="list">
+      <li>Código fuente
+        <ul>
+          <li>Repositorio público en <a href="http://bit.ly/2U8X2te">GitHub</a> </li>
+        </ul>
+      </li>
+      <li>Idea original
+        <ul>
+          <li>Andrew Mead, curso <a href="http://bit.ly/2v6OsRm">The Complete Node.js Developer Course (3rd
+              Edition).</a></li>
+        </ul>
+      </li>
+      <li>Datos API
+        <ul>
+          <li><a href="http://bit.ly/2ZaPGsP">MapBox</a></li>
+          <li><a href="http://bit.ly/2PhIxm9">Dark Sky</a></li>
+        </ul>
+      </li>
+      <li>Imágenes
+        <ul>
+          <li>Imagen Robot en "Acerca de", autor: <a href="http://bit.ly/2IxgZry">Noupload</a></li>
+          <li>Proveedor de imágenes: <a href="http://bit.ly/2Dd0oWh">Pixabay</a></li>
+        </ul>
+      </li>
+    </ul>
   </main>
   {{>footer}}
 </body>

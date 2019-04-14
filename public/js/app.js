@@ -3,6 +3,7 @@ const search = document.getElementById('search_location');
 const control = document.getElementById('control');
 const message1 = document.getElementById('message1');
 const message2 = document.getElementById('message2');
+const attribution = document.getElementById('attribution');
 
 weatherForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -14,6 +15,7 @@ weatherForm.addEventListener('submit', (e) => {
   const location = search.value;
   message1.textContent = 'Cargando...';
   message2.textContent = '';
+  attribution.hidden = true;
 
   fetch(`/weather?address=${encodeURIComponent(location)}&control=${control.value}`).then(
     response => response.json().then((data) => {
@@ -22,6 +24,7 @@ weatherForm.addEventListener('submit', (e) => {
       } else {
         message1.textContent = data.location;
         message2.textContent = data.forecast;
+        attribution.hidden = false;
       }
     }),
   );

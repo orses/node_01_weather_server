@@ -6,7 +6,7 @@
     "source": {
       "author": "Andrew Mead",
       "title": "The Complete Node.js Developer Course (3rd Edition)",
-      "web_course": "https://www.udemy.com/the-complete-nodejs-developer-course-2/",
+      "url": "http://bit.ly/2v6OsRm",
       "application": "web-server"
     },
     "description": "Este proyecto es una variación de un ejercicio propuesto por Andrew Mead en su curso The Complete Node.js Developer Course (3rd Edition), que persigue aprender a utilizar API's de terceros (DarkSky, Mapbox), empleo de Node para servir páginas web (Express), y uso de plantillas para generar páginas web (HandleBar.js)."
@@ -15,10 +15,30 @@
     "repository": "GitHub",
     "projectURL": "http://bit.ly/2U8X2te"
   },
-  "credits": {
-    "name": "Créditos",
-    "apis": [{ "name": "mapbox", "url": "https://www.mapbox.com/" }]
-  },
+  "credits": [
+    {
+      "type": "Datos API",
+      "name": "Mapbox",
+      "url": "http://bit.ly/2ZaPGsP"
+    },
+    {
+      "type": "Datos API",
+      "name": "Dark Skye",
+      "url": "http://bit.ly/2PhIxm9"
+    },
+    {
+      "type": "Proveedor de imágenes",
+      "name": "Pixabay",
+      "url": "http://bit.ly/2Dd0oWh"
+    },
+    {
+      "type": "Imágen",
+      "name": "Robot Cat Mechanically Technology Funny",
+      "author": "Noupload",
+      "licence": "CC0 Public Domain",
+      "url": "http://bit.ly/2IxgZry"
+    }
+  ],
   "improvements": [
     "Recibir los datos desglosados para poderlos ofrecer en contenedores individuales",
     "Mostrar los mensajes de error, Carga y datos de forma visual bien diferenciados tanto por el texto como por su contenedor",

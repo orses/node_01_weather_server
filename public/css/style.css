@@ -30,6 +30,10 @@ h1 {
   margin-bottom: 16px;
 }
 
+h2 {
+  color:#888888
+}
+
 nav a {
   color: #888888;
   margin-right: 16px;
@@ -41,7 +45,8 @@ nav a {
 }
 
 .help_image {
-  border: 1px solid #888888
+  border: 1px solid #888888;
+  max-width: 100%;
 }
 
 .highlight {
@@ -66,4 +71,15 @@ a {
   color: #7c88ee;
   margin-right: 16px;
   text-decoration: none;  
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.list ul {
+  list-style-type: none;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
 }
