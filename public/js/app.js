@@ -8,7 +8,6 @@ weatherForm.addEventListener('submit', (e) => {
   e.preventDefault();
   // For automatic completion
   if (control.value) {
-    search.focus();
     return false;
   }
 
@@ -18,7 +17,6 @@ weatherForm.addEventListener('submit', (e) => {
 
   fetch(`/weather?address=${encodeURIComponent(location)}&control=${control.value}`).then(
     response => response.json().then((data) => {
-      search.focus();
       if (data.error) {
         message1.textContent = data.error;
       } else {
