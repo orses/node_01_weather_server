@@ -82,3 +82,10 @@ a {
   padding-left: 1rem;
   padding-bottom: 1rem;
 }
+
+
+@media (min-width: 60rem){
+    h1{
+        font-size: 2rem;
+    }
+}
