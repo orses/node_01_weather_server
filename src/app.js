@@ -55,7 +55,7 @@ app.get('/weather', (req, res) => {
   const { control } = req.query;
   if (!address) {
     return res.send({
-      error: 'Se debe introduccir una localización',
+      error: 'Se debe introducir una localización',
     });
   }
 
