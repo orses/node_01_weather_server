@@ -62,5 +62,5 @@ typings/
 
 # Personal
 DESARROLLO.MD
-.vscode/
+/.vscode
 .dccache
